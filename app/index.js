@@ -14,13 +14,24 @@ var ProfilePic = React.createClass({
 	}
 });
 
+var Link = React.createClass({
+	render: function(){
+		return (
+			<span style={{color: 'blue', cursor: 'pointer'}}>
+				{this.props.children}
+			</span>
+		)
+	}
+})
+
+
 var ProfileLink = React.createClass({
 	render: function () {
 		return (
 			<div>
-				<a href={'https://www.github.com' + this.props.username}>
+				<Link href={'https://www.github.com' + this.props.username}>
 					{this.props.username}
-				</a>
+				</Link>
 			</div>
 		)
 	}
