@@ -11,7 +11,15 @@ function getUserInfo(username){
 
 var helpers = {
 	getPlayersInfo: function (players) {
-		//make the call
+		return axios.all(players.map(function(username){
+			return getUserInfo(username);
+		})).then(function (info){
+			return info.map(function (user){
+				return user.data
+			})
+		}).catch(function(err){
+			console.warn('Error in getPlayersInfo', err);
+		})
 	}
 }
 
