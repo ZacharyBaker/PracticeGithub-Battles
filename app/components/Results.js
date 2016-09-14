@@ -6,7 +6,7 @@ var styles = require('../styles')
 function Results (props) {
 	return (
 		<div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
-
+		<h1>Results</h1>
 		</div>
 	)
 }
